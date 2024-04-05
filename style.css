@@ -1,0 +1,214 @@
+/* for fonts  */
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+/* for fonts  */
+
+* {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* use fonts  */
+
+.home-content h1 {
+  font-family: "Josefin Sans", sans-serif;
+}
+h3,
+h2 {
+  font-family: "Inter", sans-serif;
+}
+h5 {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+p,
+span {
+  font-family: "Poppins", sans-serif;
+}
+/* use fonts  */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.899);
+  /* height: 60px; */
+}
+.navbar-brand img {
+  width: 31px;
+  /* margin: 0; */
+}
+.navbar a {
+  transition: 0.5s;
+}
+.navbar a:hover,
+.link-under li a:hover {
+  color: #0ef;
+}
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+
+  transition: all 0.2s;
+  opacity: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #0ef;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.nav-link:hover::after {
+  opacity: 1;
+}
+.wt {
+  color: #ccc;
+}
+.link-under a,
+span a {
+  text-decoration: none;
+  color: white;
+  padding-right: 15px;
+}
+
+.first_part2 {
+  background-image: url(assets/ales-nesetril-Im7lZjxeLhg-unsplash.jpg);
+  align-items: center;
+  text-align: center;
+
+  height: 100vh;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.progress {
+  height: 4px;
+  overflow: visible;
+  margin-bottom: 26px;
+  position: relative;
+}
+
+.skill span {
+  color: black;
+  position: absolute;
+  bottom: -20px;
+  font-size: 10px;
+  line-height: 10px;
+  right: 0;
+}
+
+h3 span {
+  color: aqua;
+}
+.btn {
+  padding: 15px 30px 15px 30px;
+  border-radius: 30px;
+}
+.animate-text {
+  text-align: start;
+  justify-content: center;
+}
+.biopart {
+  justify-content: center;
+}
+
+.home-content h3 {
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 0.7s;
+}
+.home-content h3:nth-child(3) {
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 0.7s;
+}
+/* .ani-img img {
+  animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+  animation-delay: 0.7s, 2s;
+  opacity: 0;
+} */
+
+.service-part {
+  padding: 70px 0;
+}
+.items-3 {
+  flex-wrap: wrap;
+}
+
+.service-items {
+  padding: 30px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.months {
+  border: 1px solid black;
+  border-radius: 10%;
+  padding: 5px 20px;
+}
+
+.service-items {
+  margin: 1% auto 1%;
+}
+.social .bi {
+  font-size: 1.8rem;
+}
+.footerpart1 {
+  background-color: rgba(0, 0, 0, 0.807);
+}
+
+/* for animation */
+
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-24px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
