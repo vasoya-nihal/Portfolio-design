@@ -514,19 +514,24 @@
     <div class="row">
       <div class="contact-heading col-12 my-3" data-aos="fade-up" data-aos-delay="0">
         <h2 class="text-center">Contact Me</h2>
+
+
       </div>
     </div>
 
     <div class="row" data-aos="fade-up" data-aos-delay="130">
       <div class="col-lg-7">
-        <form action="" class="contact-form" onsubmit="sendEmail(); reset(); return false; ">
+        <!-- <form action="" class="contact-form" onsubmit="sendEmail(); reset(); return false; "> -->
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="3cba9a3b-9b08-4ecf-a966-39449d366a6a">
+
           <div class="row">
             <div class="col-6">
               <div class="form-group">
 
                 <div class="mb-3">
                   <label for="formGroupExampleInput" class="form-label">First name</label>
-                  <input type="text" class="form-control" id="fname" required>
+                  <input type="text" class="form-control" name="fname" id="fname" required>
                 </div>
 
 
@@ -539,7 +544,7 @@
                 <div class="mb-3">
                   <label for="formGroupExampleInput2" class="form-label">
                     Last name</label>
-                  <input type="text" class="form-control" id="lname">
+                  <input type="text" class="form-control" name="lname" id="lname">
                 </div>
 
 
@@ -550,11 +555,12 @@
             <div class="email-msg-part">
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com"
+                  required>
               </div>
               <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                <textarea class="form-control" id="suggestion" rows="3"></textarea>
+                <textarea class="form-control" name="msg" id="suggestion" rows="3"></textarea>
               </div>
             </div>
           </div>
@@ -672,7 +678,7 @@
 
 
   <!-- mail js  -->
-
+  <script src="https://web3forms.com/client/script.js" async defer></script>
   <!-- mail js  -->
 
 
